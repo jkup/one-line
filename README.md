@@ -8,4 +8,4 @@ Config changes and file / folder creation do not count! They are free. For examp
 
 ## Code of Conduct
 
-This is meant to stay fun and safe for everyone
+This project uses the [following Code of Conduct](CODE_OF_CONDUCT.md).
