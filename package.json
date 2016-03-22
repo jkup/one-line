@@ -1,0 +1,29 @@
+{
+  "name": "one-line",
+  "version": "1.0.0",
+  "description": "A Node.js app where you can only contribute one line at a time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkup/one-line.git"
+  },
+  "keywords": [
+    "one",
+    "line",
+    "fun",
+    "node"
+  ],
+  "author": "Jon Kuperman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkup/one-line/issues"
+  },
+  "homepage": "https://github.com/jkup/one-line#readme",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4",
+    "express": "^4.13.4"
+  }
+}
