@@ -13,6 +13,8 @@ app.get('/hangUnlessSomeoneElseReturnsFromHere', function(req, res) {}); // To m
 app.get('/useless', function(req, res){ res.redirect('http://www.theuselessweb.com/'); })
 app.get('/findMoreHacktoberfestLabelledIssues', function(req, res){ res.redirect('http://issuehub.io/?label[]=hacktoberfest'); })
 
+app.get('/hello/:name', function(req, res) { res.json({"hello" : req.params.name}); })
+
 console.log(emoji)
 console.log(cool())
 console.log(funky_intro("Welcome to jkup, a Node.js app where you can only contribute one line at a time. Inspired by jkup himself."))
