@@ -9,6 +9,7 @@ app.get('/', function(req, res) {
   res.send('Hello Mars! <br> Days until next year:' + Math.round(( new Date().setFullYear(new Date().getFullYear() + 1, 0, 1) - new Date() )/(1000 * 60 * 60 * 24)));
 })
 
+app.get('/source', function(req, res){ res.redirect('https://github.com/jkup/one-line/'); })
 app.get('/hangUnlessSomeoneElseReturnsFromHere', function(req, res) { 
   res.redirect('https://www.google.com/?tbm=isch&q=when+will+my+husband+return+from+war');
 }); // To make this route work, someone else needs to return a response
