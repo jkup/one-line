@@ -11,6 +11,7 @@ app.get('/', function(req, res) {
 
 app.get('/hangUnlessSomeoneElseReturnsFromHere', function(req, res) {}); // To make this route work, someone else needs to return a response
 app.get('/useless', function(req, res){ res.redirect('http://www.theuselessweb.com/'); })
+app.get('/findMoreHacktoberfestLabelledIssues', function(req, res){ res.redirect('http://issuehub.io/?label[]=hacktoberfest'); })
 
 console.log(emoji)
 console.log(cool())
