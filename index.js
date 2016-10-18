@@ -6,7 +6,7 @@ const emoji = require('emoji-cool');
 const app = express()
 
 app.get('/', function(req, res) {
-  res.send('Hello Mars!');
+  res.send('Hello Mars! <br> Days until next year:' + Math.round(( new Date().setFullYear(new Date().getFullYear() + 1, 0, 1) - new Date() )/(1000 * 60 * 60 * 24)));
 })
 
 app.get('/hangUnlessSomeoneElseReturnsFromHere', function(req, res) {}); // To make this route work, someone else needs to return a response
