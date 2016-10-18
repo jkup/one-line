@@ -9,6 +9,8 @@ app.get('/', function(req, res) {
   res.send('Hello Mars!');
 })
 
+app.get('/useless', function(req, res){ res.redirect('http://www.theuselessweb.com/'); })
+
 console.log(emoji)
 console.log(cool())
 console.log(funky_intro("Welcome to jkup, a Node.js app where you can only contribute one line at a time. Inspired by jkup himself."))
