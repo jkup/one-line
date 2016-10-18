@@ -17,6 +17,8 @@ app.get('/findMoreHacktoberfestLabelledIssues', function(req, res){ res.redirect
 
 app.get('/hello/:name', function(req, res) { res.json({"hello" : req.params.name}); })
 
+app.use(function (req, res, next) { res.status(404); res.render('404'); });
+
 console.log(emoji)
 console.log(cool())
 console.log(funky_intro("Welcome to jkup, a Node.js app where you can only contribute one line at a time. Inspired by jkup himself."))
