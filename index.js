@@ -24,6 +24,6 @@ console.log(emoji)
 console.log(cool())
 console.log(funky_intro("Welcome to jkup, a Node.js app where you can only contribute one line at a time. Inspired by jkup himself."))
 
-var server = app.listen(process.env.PORT || 3000, function () {}); // now we can close it if needed
+var server = app.listen(process.env.PORT || 3000, function () { console.log("Server started"); }); // now we can close it if needed
 app.use(express.static('public'));
 console.log("I like this idea. :p");
