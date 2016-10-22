@@ -4,6 +4,7 @@ const express = require('express')
 const emoji = require('emoji-cool');
 
 const app = express()
+app.engine('html', require('ejs').renderFile); app.set('view engine', 'html');
 
 app.get('/', function(req, res) {
   res.send('Hello Mars! <br> Days until next year:' + Math.round(( new Date().setFullYear(new Date().getFullYear() + 1, 0, 1) - new Date() )/(1000 * 60 * 60 * 24)));
