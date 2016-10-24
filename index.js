@@ -20,6 +20,7 @@ app.get('/randNum/cake', function(req, res) { res.json({num: 44}); });
 app.get('/hello/:name', function(req, res) { res.json({"hello" : req.params.name}); })
 app.get('/goodbye/:name', function(req, res) { res.json({"goodbye" : req.params.name}); })
 app.get('/admin', function(req, res) { res.json("ACCESS DENIED"); })
+app.get('/leftpad/:val/:len', function(req, res) { res.json({ 'response': (+req.params.len > 0) ? (Array(+req.params.len-req.params.val.length).fill(0).join('') + req.params.val).slice(-req.params.res) : req.params.val })});
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
