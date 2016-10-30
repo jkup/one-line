@@ -24,7 +24,10 @@ app.get('/haveSomeFunCats', function(req, res) { res.redirect('http://www.catgif
 app.get('/leftpad/:val/:len', function(req, res) { res.json({ 'response': (+req.params.len > 0) ? (Array(+req.params.len-req.params.val.length).fill(0).join('') + req.params.val).slice(-req.params.res) : req.params.val })});
 app.get('/add/:x/:y', function(req, res) { res.json({x: req.params.x, y: req.params.y, sum: (Number(req.params.x) + Number(req.params.y))}); });
 app.get('/meaningOfLife', function(req, res) { res.json({ 1337: 42 }) });
-app.get('/hacktoberfest-countdown', function (req, res) { res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.'); });
+app.get('/hacktoberfest-countdown', function (req, res) { 
+	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.'); 
+	console.log("Better get those PRs in soon, buddy!");
+});
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
