@@ -10,7 +10,8 @@ app.get('/', function(req, res) {
   res.send('Hello Mars! <br> Days until next year:' + Math.round(( new Date().setFullYear(new Date().getFullYear() + 1, 0, 1) - new Date() )/(1000 * 60 * 60 * 24)));
 })
 
-app.get('/source', function(req, res){ res.redirect('https://github.com/jkup/one-line/'); })
+app.get('/source', function(req, res){ res.redirect('https://github.com/jkup/one-line/');
+  console.log("Here you can contribute to this project!")})
 app.get('/hangUnlessSomeoneElseReturnsFromHere', function(req, res) {
   res.redirect('https://www.google.com/?tbm=isch&q=when+will+my+husband+return+from+war');
 }); // To make this route work, someone else needs to return a response
@@ -25,8 +26,8 @@ app.get('/leftpad/:val/:len', function(req, res) { res.json({ 'response': (+req.
 app.get('/add/:x/:y', function(req, res) { res.json({x: req.params.x, y: req.params.y, sum: (Number(req.params.x) + Number(req.params.y))}); });
 app.get('/fizzbuzz', function(req, res) { for(var i = 1, arr = []; i<51 ;i++) { arr.push(((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz')) || i)}; res.json(arr); });
 app.get('/meaningOfLife', function(req, res) { res.json({ 1337: 42 }) });
-app.get('/hacktoberfest-countdown', function (req, res) { 
-	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.'); 
+app.get('/hacktoberfest-countdown', function (req, res) {
+	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.');
 	console.log("Better get those PRs in soon, buddy!");
 });
 
