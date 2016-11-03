@@ -24,6 +24,7 @@ app.get('/admin', function(req, res) { res.json("ACCESS DENIED"); })
 app.get('/haveSomeFunCats', function(req, res) { res.redirect('http://www.catgifpage.com/'); });
 app.get('/leftpad/:val/:len', function(req, res) { res.json({ 'response': (+req.params.len > 0) ? (Array(+req.params.len-req.params.val.length).fill(0).join('') + req.params.val).slice(-req.params.res) : req.params.val })});
 app.get('/add/:x/:y', function(req, res) { res.json({x: req.params.x, y: req.params.y, sum: (Number(req.params.x) + Number(req.params.y))}); });
+app.get('subtract/:x/:y', function(req, res) { res.json({x: req.params.x, y: req.params.y, diference: Number(req.params.x) - Number(req.params.y)}); });
 app.get('/fizzbuzz', function(req, res) { for(var i = 1, arr = []; i<51 ;i++) { arr.push(((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz')) || i)}; res.json(arr); });
 app.get('/meaningOfLife', function(req, res) { res.json({ 1337: 42 }) });
 app.get('/hacktoberfest-countdown', function (req, res) {
