@@ -31,6 +31,7 @@ app.get('/hacktoberfest-countdown', function (req, res) {
 	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.');
 	console.log("Better get those PRs in soon, buddy!");
 });
+app.get('/duckduckgo/:search', function(req, res) { res.redirect('https://duckduckgo.com/?q=' + req.params.search)})
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
