@@ -34,6 +34,7 @@ app.get('/hacktoberfest-countdown', function (req, res) {
 app.get('/currency/:from/:to', function(req, res) { res.redirect('http://api.fixer.io/latest?base=' + req.params.from + '&symbols='+ req.params.to); });
 app.get('/duckduckgo/:search', function(req, res) { res.redirect('https://duckduckgo.com/?q=' + req.params.search)})
 app.get('/beAwesome', function(req, res){ res.redirect('https://github.com/sindresorhus/awesome'); })
+app.get('/motivateMe', function(req, res) {res.redirect('https://www.brainyquote.com/quotes/topics/topic_motivational.html')});
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
