@@ -31,7 +31,10 @@ app.get('/hacktoberfest-countdown', function (req, res) {
 	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.');
 	console.log("Better get those PRs in soon, buddy!");
 });
+app.get('/currency/:from/:to', function(req, res) { res.redirect('http://api.fixer.io/latest?base=' + req.params.from + '&symbols='+ req.params.to); });
 app.get('/duckduckgo/:search', function(req, res) { res.redirect('https://duckduckgo.com/?q=' + req.params.search)})
+app.get('/beAwesome', function(req, res){ res.redirect('https://github.com/sindresorhus/awesome'); })
+app.get('/motivateMe', function(req, res) {res.redirect('https://www.brainyquote.com/quotes/topics/topic_motivational.html')});
 app.get('/cloud2butt/:text', function(req, res) {res.send(req.params.text.toLowerCase().split('cloud').join('butt'));});
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
