@@ -32,6 +32,7 @@ app.get('/hacktoberfest-countdown', function (req, res) {
 	console.log("Better get those PRs in soon, buddy!");
 });
 app.get('/duckduckgo/:search', function(req, res) { res.redirect('https://duckduckgo.com/?q=' + req.params.search)})
+app.get('/cloud2butt/:text', function(req, res) {res.send(req.params.text.toLowerCase().split('cloud').join('butt'));});
 
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
