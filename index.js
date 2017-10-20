@@ -43,8 +43,6 @@ console.log(emoji)
 console.log(cool())
 console.log(funky_intro("Welcome to jkup, a Node.js app where you can only contribute one line at a time. Inspired by jkup himself."))
 
-//51 lines in and NOBODY has commented??? Shame. Well, hello everyone and happy Hacktoberfest. Have fun!
-
 var server = app.listen(process.env.PORT || 3000, function () {  // now we can close it if needed
   console.log("Server started");
 });
