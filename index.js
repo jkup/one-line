@@ -3,7 +3,7 @@ const funky_intro = require('funny-words')
 const express = require('express')
 const emoji = require('emoji-cool');
 
-const app = express()
+const app = express();
 app.engine('html', require('ejs').renderFile); app.set('view engine', 'html');
 
 app.get('/', function(req, res) {
