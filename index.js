@@ -38,6 +38,7 @@ app.get('/motivateMe', function(req, res) {res.redirect('https://www.brainyquote
 app.get('/cloud2butt/:text', function(req, res) {res.send(req.params.text.toLowerCase().split('cloud').join('butt'));});
 app.get('/hacktoberfest-checker', function(req, res){ res.redirect('https://hacktoberfestchecker.herokuapp.com/'); })
 app.get('/findme', function(req,res){ res.redirect('https://github.com/mbj36');})
+app.get('/greet', function(req, res) { res.send('🖖'); });
 
 app.get('/ispalindrome/:word', (req, res) => res.send([req.params.word].map(w => w.toLowerCase()).map(w => w.replace(/[^a-zA-Z]+/g, "")).map(w => {console.log(w); return w}).reduce((acc, next) => acc ? acc : [...next].reverse().join('') === next, false)))
 
