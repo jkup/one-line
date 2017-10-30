@@ -28,7 +28,7 @@ app.get('/subtract/:x/:y', function(req, res) { res.json({x: req.params.x, y: re
 app.get('/fizzbuzz', function(req, res) { for(var i = 1, arr = []; i<51 ;i++) { arr.push(((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz')) || i)}; res.json(arr); });
 app.get('/meaningOfLife', function(req, res) { res.json({ 1337: 42 }) });
 app.get('/hacktoberfest-countdown', function (req, res) {
-	res.send('Hacktoberfest end is in ' + new Date(new Date(2016, 09, 31).getTime() - Date.now()).getDate() + ' days.');
+	res.send('Hacktoberfest ends in ' + (new Date(2017, 9, 31).getTime() - Date.now())/1000/(24*60*60) + ' days.');
 	console.log("Better get those PRs in soon, buddy!");
 });
 app.get('/currency/:from/:to', function(req, res) { res.redirect('http://api.fixer.io/latest?base=' + req.params.from + '&symbols='+ req.params.to); });
