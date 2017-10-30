@@ -36,6 +36,7 @@ app.get('/duckduckgo/:search', function(req, res) { res.redirect('https://duckdu
 app.get('/beAwesome', function(req, res){ res.redirect('https://github.com/sindresorhus/awesome'); })
 app.get('/motivateMe', function(req, res) {res.redirect('https://www.brainyquote.com/quotes/topics/topic_motivational.html')});
 app.get('/cloud2butt/:text', function(req, res) {res.send(req.params.text.toLowerCase().split('cloud').join('butt'));});
+//51 lines in and NOBODY has commented??? Shame. Well, hello everyone and happy Hacktoberfest. Have fun!
 app.get('/hacktoberfest-checker', function(req, res){ res.redirect('https://hacktoberfestchecker.herokuapp.com/'); })
 app.get('/findme', function(req,res){ res.redirect('https://github.com/mbj36');})
 app.get('/greet', function(req, res) { res.send('🖖'); });
@@ -43,7 +44,6 @@ app.get('/nativescript-vue', function(req, res) { res.send('Want to build native
 app.get('/rollTheDice/:dice', function(req, res) {res.json({"rollValue" : Math.floor(Math.random() * req.params.dice) + 1 })});
 
 app.get('/ispalindrome/:word', (req, res) => res.send([req.params.word].map(w => w.toLowerCase()).map(w => w.replace(/[^a-zA-Z]+/g, "")).map(w => {console.log(w); return w}).reduce((acc, next) => acc ? acc : [...next].reverse().join('') === next, false)))
-
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
 
 console.log(emoji)
