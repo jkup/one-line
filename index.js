@@ -42,6 +42,7 @@ app.get('/findme', function(req,res){ res.redirect('https://github.com/mbj36');}
 app.get('/greet', function(req, res) { res.send('🖖'); });
 app.get('/nativescript-vue', function(req, res) { res.send('Want to build native apps with vue? Here you go: https://nativescript-vue.org/'); });
 app.get('/rollTheDice/:dice', function(req, res) {res.json({"rollValue" : Math.floor(Math.random() * req.params.dice) + 1 })});
+app.get('/rgb/:r/:g/:b', (req, res) => res.send(`<html style="background-color: rgb(${req.params.r}, ${req.params.g}, ${req.params.b});"><html>`));
 
 app.get('/ispalindrome/:word', (req, res) => res.send([req.params.word].map(w => w.toLowerCase()).map(w => w.replace(/[^a-zA-Z]+/g, "")).map(w => {console.log(w); return w}).reduce((acc, next) => acc ? acc : [...next].reverse().join('') === next, false)))
 app.use(function (req, res, next) { res.status(404); res.render('404'); });
